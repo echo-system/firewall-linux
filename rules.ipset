@@ -1,0 +1,13 @@
+create allow-net-port hash:net,port
+add allow-net-port 0.0.0.0/0,tcp:22
+
+create drop hash:net
+add drop 10.0.0.0/8
+add drop 172.16.0.0/12
+add drop 192.168.0.0/16
+add drop 169.254.0.0/16
+add drop 192.0.0.0/24
+add drop 192.0.2.0/24
+add drop 198.51.100.0/24
+add drop 203.0.113.0/24
+
