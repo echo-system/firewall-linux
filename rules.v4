@@ -8,7 +8,7 @@
 -A INPUT -m set --match-set drop src -j DROP
 -A INPUT -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
 
--A INPUT -m set --match-set allow-net-port dst,dst -j ACCEPT
+-A INPUT -m set --match-set allow-net-port src,dst -j ACCEPT
 
 -A INPUT -p udp -j REJECT --reject-with icmp-port-unreachable
 -A INPUT -p tcp -j REJECT --reject-with tcp-reset
